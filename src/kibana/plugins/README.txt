@@ -1,3 +1,8 @@
+This is based on kibana 4.1.2 and add dashboard panel focus future on it
+-yh 
+
+==============================
+
 Kibana Plugins
 ==================
 
