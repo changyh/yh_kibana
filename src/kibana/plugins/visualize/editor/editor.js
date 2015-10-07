@@ -30,6 +30,20 @@ define(function (require) {
       }
     }
   })
+  .when('/visualize/edit1/:id', { //yh ad for focus
+    template: require('text!plugins/visualize/editor/editor1.html'),
+    resolve: {
+      savedVis: function (savedVisualizations, courier, $route) {
+        return savedVisualizations.get($route.current.params.id)
+        .catch(courier.redirectWhenMissing({
+          'visualization': '/visualize',
+          'search': '/settings/objects/savedVisualizations/' + $route.current.params.id,
+          'index-pattern': '/settings/objects/savedVisualizations/' + $route.current.params.id,
+          'index-pattern-field': '/settings/objects/savedVisualizations/' + $route.current.params.id
+        }));
+      }
+    }
+  })
   .when('/visualize/edit/:id', {
     template: require('text!plugins/visualize/editor/editor.html'),
     resolve: {

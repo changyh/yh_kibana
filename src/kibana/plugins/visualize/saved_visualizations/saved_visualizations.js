@@ -28,6 +28,10 @@ define(function (require) {
       return kbnUrl.eval('#/visualize/edit/{{id}}', {id: id});
     };
 
+    this.focusUrl = function (id) {  //yh add for focus
+      return kbnUrl.eval('#/visualize/focus/{{id}}', {id: id});
+    };
+
     this.delete = function (ids) {
       ids = !_.isArray(ids) ? [ids] : ids;
       return Promise.map(ids, function (id) {
