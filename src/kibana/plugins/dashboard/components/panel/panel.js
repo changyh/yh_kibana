@@ -41,7 +41,7 @@ define(function (require) {
             console.log('yh:panel.js scopr.watch panelConfig= ', panelConfig);
             $scope.savedObj = panelConfig.savedObj;
             $scope.editUrl = panelConfig.editUrl;
-            $scope.focusUrl = '#/visualize/edit1/' + panelConfig.panel.id;
+            $scope.focusUrl = panelConfig.focusUrl;
             $scope.$on('$destroy', panelConfig.savedObj.destroy);
 
             $scope.filter = function (field, value, operator) {

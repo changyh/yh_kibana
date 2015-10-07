@@ -28,7 +28,7 @@ define(function (require) {
       return kbnUrl.eval('#/visualize/edit/{{id}}', {id: id});
     };
 
-    this.focusUrl = function (id) {  //yh add for focus
+    this.focusUrl = function (id) {  //yh add for focus with panel on dashboard
       return kbnUrl.eval('#/visualize/focus/{{id}}', {id: id});
     };
 

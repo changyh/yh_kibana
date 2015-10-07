@@ -30,8 +30,8 @@ define(function (require) {
       }
     }
   })
-  .when('/visualize/edit1/:id', { //yh ad for focus
-    template: require('text!plugins/visualize/editor/editor1.html'),
+  .when('/visualize/focus/:id', { //yh ad for focus with panel on dashboard
+    template: require('text!plugins/visualize/editor/focus.html'),
     resolve: {
       savedVis: function (savedVisualizations, courier, $route) {
         return savedVisualizations.get($route.current.params.id)

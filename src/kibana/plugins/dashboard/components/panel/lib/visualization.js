@@ -14,7 +14,8 @@ define(function (require) {
           return {
             savedObj: savedVis,
             panel: panel,
-            editUrl: savedVisualizations.urlFor(panel.id)
+            editUrl: savedVisualizations.urlFor(panel.id),
+            focusUrl: savedVisualizations.focusUrl(panel.id)
           };
         });
     };
