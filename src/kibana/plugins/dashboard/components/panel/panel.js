@@ -32,13 +32,13 @@ define(function (require) {
 
         // receives $scope.panel from the dashboard grid directive, seems like should be isolate?
         $scope.$watch('id', function (id) {
-          console.log('yh: panel.js scopr.watch id= ', $scope.panel.id);
-          console.log('yh: panel.js scopr.watch panel= ', $scope.panel);
+          // console.log('yh: panel.js scopr.watch id= ', $scope.panel.id);
+          // console.log('yh: panel.js scopr.watch panel= ', $scope.panel);
           if (!$scope.panel.id || !$scope.panel.type) return;
 
           loadPanel($scope.panel, $scope).then(function (panelConfig) {
             // These could be done in loadPanel, putting them here to make them more explicit
-            console.log('yh:panel.js scopr.watch panelConfig= ', panelConfig);
+            // console.log('yh:panel.js scopr.watch panelConfig= ', panelConfig);
             $scope.savedObj = panelConfig.savedObj;
             $scope.editUrl = panelConfig.editUrl;
             $scope.focusUrl = panelConfig.focusUrl;
