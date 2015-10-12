@@ -290,6 +290,10 @@ define(function (require) {
       }
     };
 
+    $scope.doTheBack = function () {
+      window.history.back();
+    };
+
     function transferVisState(fromVis, toVis, fetch) {
       return function () {
         toVis.setState(fromVis.getState());
